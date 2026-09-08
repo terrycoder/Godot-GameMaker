@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="GMPlayerShellConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/player_shell/gm_player_shell_configuration.gd" id="1_configuration"]
+
+[resource]
+script = ExtResource("1_configuration")
+configuration_id = "alpine_rescue_patrol"
+world_id = "gm.world.alpine.rescue_patrol"
+seed = 2609042537
+map_id = "gm.map.alpine.ridge"
+surface_id = "gm.surface.alpine.ridge"
+graph_id = "gm.graph.alpine.ridge"
+map_display_name_zh = "高山脊线"
+player_id = "gm.actor.alpine.ranger"
+player_role_id = "gm.role.alpine.ranger"
+player_role_display_name_zh = "高山巡护员"
+entry_anchor_id = "gm.anchor.alpine.entry"
+entry_position = Vector2(224, 384)
+target_anchor_id = "gm.anchor.alpine.radio"
+target_position = Vector2(864, 384)
+exit_anchor_id = "gm.anchor.alpine.exit"
+exit_position = Vector2(1000, 384)
+target_id = "gm.object.alpine.radio"
+target_definition_id = "gm.content.alpine.radio"
+target_display_name_zh = "救援电台"
+ability_id = "gm.ability.alpine.patrol.interact"
+ability_display_name_zh = "检查救援电台"
+ability_description_zh = "通过统一交互请求提交救援电台状态变化。"
+interaction_id = "gm.interaction.alpine.patrol.inspect"
+task_interaction_id = "gm.interaction.alpine.patrol.assign"
+interaction_recipe_id = "gm.recipe.alpine.radio"
+interaction_event_tag = "event.alpine.radio.activated"
+task_definition_id = "gm.definition.alpine.patrol"
+task_id = "gm.task.alpine.patrol"
+assignment_id = "gm.assignment.alpine.patrol"
+task_display_name_zh = "巡检高山救援电台"
+task_description_zh = "通过正式玩家外壳完成高山救援电台巡检。"
+objective_id = "gm.objective.alpine.patrol"
+objective_display_name_zh = "完成巡检步骤"
+objective_target = 3
+resource_id = "gm.resource.alpine.patrol"
+reservation_rule_id = "gm.reservation.alpine.patrol"
+reservation_id = "gm.reservation.alpine.patrol.workbench"
+duty_provider_id = "gm.duty.alpine.patrol"
+duty_event_type = "gm.fact.duty.alpine.patrol"
+scene_id = "gm.scene.alpine.ridge"
+scene_definition_id = "gm.scene.alpine.ridge"
+scene_recipe_id = "gm.recipe.alpine.ridge"
+scene_skeleton_id = "gm.skeleton.alpine.ridge"
+scene_display_name_zh = "高山脊线巡护场景"
+scene_objective_id = "gm.objective.scene.alpine.patrol"
+scene_result_prefix = "gm.result.alpine.patrol"
+scene_reason_prefix = "scene.alpine.patrol"
+facility_id = "gm.facility.alpine.ridge"
+hostile_role_id = "gm.role.alpine.none"
+region_id = "gm.region.alpine.ridge"
+camera_profile_id = "gm.camera.alpine.rescue_patrol"
+camera_display_name_zh = "高山巡护相机"
+camera_zoom = 0.85
+camera_look_ahead = Vector2(64, -48)
+save_path = "user://alpine_patrol.world.json"

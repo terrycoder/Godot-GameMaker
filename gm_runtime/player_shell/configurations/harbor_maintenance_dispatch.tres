@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="GMPlayerShellConfiguration" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/player_shell/gm_player_shell_configuration.gd" id="1_configuration"]
+
+[resource]
+script = ExtResource("1_configuration")
+configuration_id = "harbor_maintenance_dispatch"
+world_id = "gm.world.harbor.maintenance_dispatch"
+seed = 2609042521
+map_id = "gm.map.harbor.service_deck"
+surface_id = "gm.surface.harbor.service_deck"
+graph_id = "gm.graph.harbor.service_deck"
+map_display_name_zh = "港区服务甲板"
+player_id = "gm.actor.harbor.technician"
+player_role_id = "gm.role.harbor.technician"
+player_role_display_name_zh = "港区维护技师"
+entry_anchor_id = "gm.anchor.harbor.entry"
+entry_position = Vector2(192, 256)
+target_anchor_id = "gm.anchor.harbor.pump"
+target_position = Vector2(704, 256)
+exit_anchor_id = "gm.anchor.harbor.exit"
+exit_position = Vector2(960, 256)
+target_id = "gm.object.harbor.pump"
+target_definition_id = "gm.content.harbor.pump"
+target_display_name_zh = "港区泵组"
+ability_id = "gm.ability.harbor.maintenance.interact"
+ability_display_name_zh = "检查港区泵组"
+ability_description_zh = "通过统一交互请求提交港区泵组状态变化。"
+interaction_id = "gm.interaction.harbor.maintenance.inspect"
+task_interaction_id = "gm.interaction.harbor.maintenance.assign"
+interaction_recipe_id = "gm.recipe.harbor.pump"
+interaction_event_tag = "event.harbor.pump.activated"
+task_definition_id = "gm.definition.harbor.maintenance"
+task_id = "gm.task.harbor.maintenance"
+assignment_id = "gm.assignment.harbor.maintenance"
+task_display_name_zh = "维护港区泵组"
+task_description_zh = "通过正式玩家外壳完成港区泵组维护流程。"
+objective_id = "gm.objective.harbor.maintenance"
+objective_display_name_zh = "完成维护步骤"
+objective_target = 2
+resource_id = "gm.resource.harbor.maintenance"
+reservation_rule_id = "gm.reservation.harbor.maintenance"
+reservation_id = "gm.reservation.harbor.maintenance.workbench"
+duty_provider_id = "gm.duty.harbor.maintenance"
+duty_event_type = "gm.fact.duty.harbor.maintenance"
+scene_id = "gm.scene.harbor.service_deck"
+scene_definition_id = "gm.scene.harbor.service_deck"
+scene_recipe_id = "gm.recipe.harbor.service_deck"
+scene_skeleton_id = "gm.skeleton.harbor.service_deck"
+scene_display_name_zh = "港区服务甲板维护场景"
+scene_objective_id = "gm.objective.scene.harbor.maintenance"
+scene_result_prefix = "gm.result.harbor.maintenance"
+scene_reason_prefix = "scene.harbor.maintenance"
+facility_id = "gm.facility.harbor.service_deck"
+hostile_role_id = "gm.role.harbor.none"
+region_id = "gm.region.harbor.service_deck"
+camera_profile_id = "gm.camera.harbor.maintenance_dispatch"
+camera_display_name_zh = "港区维护相机"
+camera_zoom = 1.2
+camera_look_ahead = Vector2(128, 32)
+save_path = "user://harbor_dispatch.world.json"
