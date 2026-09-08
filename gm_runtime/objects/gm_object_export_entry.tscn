@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource path="res://gm_runtime/objects/gm_object_export_entry.gd" type="Script" id="1"]
+[ext_resource path="res://gm_runtime/objects/gm_object_instance.gd" type="Script" id="2"]
+[ext_resource path="res://gm_runtime/objects/locked_chest_runtime.tres" type="Resource" id="3"]
+[ext_resource path="res://gm_runtime/objects/gm_object_ability_host_node.gd" type="Script" id="4"]
+[ext_resource path="res://gm_runtime/objects/gm_object_sample_presenter.gd" type="Script" id="5"]
+
+[sub_resource type="RectangleShape2D" id="Shape"]
+size = Vector2(128, 80)
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.055, 0.065, 0.09, 0.94)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Task10ObjectRuntime" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1100.0
+offset_bottom = 700.0
+color = Color(0.035, 0.045, 0.065, 1)
+mouse_filter = 2
+
+[node name="LockedChest" type="Node2D" parent="."]
+position = Vector2(550, 350)
+script = ExtResource("2")
+definition = ExtResource("3")
+stable_instance_id = "gm.object.instance.v1.export.locked_chest"
+map_id = &"map.task10.export"
+object_state = {"loot_claimed": false, "opened": false}
+
+[node name="AbilityHost" type="Node" parent="LockedChest"]
+script = ExtResource("4")
+metadata/gm_standard_role = "ability_host"
+
+[node name="InteractionArea" type="Area2D" parent="LockedChest"]
+metadata/gm_standard_role = "interaction_area"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedChest/InteractionArea"]
+shape = SubResource("Shape")
+
+[node name="Presenter" type="Node2D" parent="LockedChest"]
+script = ExtResource("5")
+metadata/gm_standard_role = "presenter"
+
+[node name="CueReceiver" type="Node" parent="LockedChest"]
+metadata/gm_standard_role = "cue_receiver"
+
+[node name="SaveIdentity" type="Node" parent="LockedChest"]
+metadata/gm_standard_role = "save_identity"
+
+[node name="Anchors" type="Node2D" parent="LockedChest"]
+metadata/gm_standard_role = "anchors"
+
+[node name="Interaction" type="Marker2D" parent="LockedChest/Anchors"]
+metadata/gm_anchor_id = "interaction"
+
+[node name="TitlePanel" type="PanelContainer" parent="."]
+offset_left = 250.0
+offset_top = 60.0
+offset_right = 850.0
+offset_bottom = 190.0
+theme_override_styles/panel = SubResource("PanelStyle")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 82.0
+offset_right = 820.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.92, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "任务10 运行时对象样板\n上锁宝箱：准备中\nGAS：准备中"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 310.0
+offset_top = 480.0
+offset_right = 790.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.65, 0.72, 0.84, 1)
+theme_override_font_sizes/font_size = 18
+text = "稳定实例ID · 保存身份 · 统一GAS交互"
+horizontal_alignment = 1

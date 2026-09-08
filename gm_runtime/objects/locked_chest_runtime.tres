@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="GMObjectDefinition" load_steps=6 format=3]
+
+[ext_resource path="res://gm_runtime/objects/gm_object_definition.gd" type="Script" id="1"]
+[ext_resource path="res://gm_runtime/objects/abilities/open_locked_chest.tres" type="Resource" id="3"]
+[ext_resource path="res://interaction_recipes/gm_interaction_recipe.gd" type="Script" id="4"]
+
+[sub_resource type="Resource" id="Recipe"]
+script = ExtResource("4")
+recipe_id = "recipe.chest.locked_open"
+interaction_kind = "chest"
+ability_id = "ability.object.open_locked_chest"
+required_item_id = "item.key.iron"
+blocked_state = {"opened": true}
+success_state_patch = {"opened": true, "loot_claimed": true}
+required_payload_keys = PackedStringArray("loot_table_id")
+event_tag = "event.object.chest_opened"
+cue_id = "cue.object.chest_open"
+
+[sub_resource type="RectangleShape2D" id="Shape"]
+size = Vector2(48, 32)
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "上锁宝箱"
+content_id = "object.chest.locked.iron"
+content_type_id = "gm.object_definition"
+tags = PackedStringArray("object", "chest", "locked")
+ability_package_ids = PackedStringArray("ability.object.open_locked_chest")
+object_kind = "chest"
+ability_definitions = [ExtResource("3")]
+interaction_recipe = SubResource("Recipe")
+collision_shape = SubResource("Shape")
+persistent = true
+semantic_type_id = &"object.chest"
+anchor_names = PackedStringArray("interaction", "presentation", "loot")
+state_defaults = {"opened": false, "loot_claimed": false}
