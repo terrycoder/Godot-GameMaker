@@ -1,0 +1,62 @@
+# Godot generated state and imports
+.godot/
+**/.godot/
+*.import
+*.tmp
+*.temp
+*.bak
+*.old
+*.log
+
+# Build products and packages
+build/
+dist/
+exports/
+*.exe
+*.pck
+*.dll
+*.so
+*.dylib
+*.apk
+*.aab
+*.ipa
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Tests, experiments and generated evidence
+tests/
+test/
+dev_samples/
+reports/
+evidence/
+reviewer_handoffs/
+experiments/
+experiment/
+probes/
+fixtures/
+temp/
+tmp/
+cache/
+research-cache/
+
+# User/editor/OS state
+user_data/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Agent-local files
+.codex/
+AGENTS.md
+.env
+.env.*
+*.pem
+*.pfx
+*.p12
+*.key
