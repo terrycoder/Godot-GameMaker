@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GMContentMigrationTable" format=3 uid="uid://d4kp5kraul4lr"]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_migration_table.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_migration_entry.gd" id="1_m17rw"]
+
+[resource]
+script = ExtResource("1")

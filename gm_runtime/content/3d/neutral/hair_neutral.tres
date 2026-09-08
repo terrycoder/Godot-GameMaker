@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GMHairAsset" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_hair_asset.gd" id="1"]
+
+[sub_resource type="SphereMesh" id="HairMesh"]
+radius = 0.31
+height = 0.27
+radial_segments = 16
+rings = 6
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Hair"
+content_id = "gm.character.hair.neutral"
+content_type_id = "gm.character.hair_asset"
+tags = PackedStringArray("neutral", "humanoid", "hair")
+part_slot = "hair"
+mesh_asset_id = "gm.asset.mesh.neutral_hair"
+mesh = SubResource("HairMesh")
+attachment_socket_id = "gm.character.socket.head"
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+optional = true

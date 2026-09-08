@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GMPostureProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_posture_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性姿态"
+content_id = "gm.character.posture.neutral"
+content_type_id = "gm.character.posture_profile"
+tags = PackedStringArray("neutral", "posture")
+idle_spine_pitch_degrees = 0.0
+walk_stride_scale = 1.0
+interaction_reach_scale = 1.0
+root_offset = Vector3(0, 0, 0)
+semantic_pose_offsets = {"locomotion.idle": Vector3(0, 0, 0), "locomotion.walk": Vector3(0, 0, 0), "interaction.greet": Vector3(0, 0, 0)}

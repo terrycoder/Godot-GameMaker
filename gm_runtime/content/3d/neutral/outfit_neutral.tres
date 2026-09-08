@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="GMOutfitAsset" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_outfit_asset.gd" id="1"]
+
+[sub_resource type="BoxMesh" id="OutfitMesh"]
+size = Vector3(0.82, 1.08, 0.52)
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Outfit"
+content_id = "gm.character.outfit.neutral"
+content_type_id = "gm.character.outfit_asset"
+tags = PackedStringArray("neutral", "humanoid", "outfit")
+part_slot = "outfit"
+mesh_asset_id = "gm.asset.mesh.neutral_outfit"
+mesh = SubResource("OutfitMesh")
+attachment_socket_id = ""
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+compatible_body_fit_class_ids = PackedStringArray("gm.character.fit.standard")
+hide_body_surface_ids = PackedStringArray("body.torso")
+optional = false

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GMSemanticMaterial" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/presentation/planar3d/gm_semantic_material.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Skin Semantic Material"
+content_id = "gm.presentation.semantic_material.skin.neutral"
+content_type_id = "gm.presentation.semantic_material"
+tags = PackedStringArray("neutral", "semantic", "skin")
+source = "gm_ext_3d_08_neutral"
+semantic_kind = "Skin"
+material_id = "gm.material.semantic.Skin.neutral"
+fallback_kind = "Skin"
+albedo_color = Color(0.76, 0.5, 0.4, 1)
+roughness = 0.72
+metallic = 0.0

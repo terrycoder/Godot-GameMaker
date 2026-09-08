@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="GMHumanoidSkeletonContract" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_humanoid_skeleton_contract.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_humanoid_skeleton_socket.gd" id="2"]
+
+[sub_resource type="Resource" id="SocketHead"]
+script = ExtResource("2")
+socket_id = "gm.character.socket.head"
+bone_name = "head"
+allowed_part_slots = PackedStringArray("head", "hair", "feature")
+optional = false
+
+[sub_resource type="Resource" id="SocketHandR"]
+script = ExtResource("2")
+socket_id = "gm.character.socket.hand_r"
+bone_name = "hand_r"
+allowed_part_slots = PackedStringArray("accessory")
+optional = true
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Humanoid Skeleton"
+content_id = "gm.character.skeleton.humanoid"
+content_type_id = "gm.character.humanoid_skeleton_contract"
+tags = PackedStringArray("neutral", "humanoid", "skeleton")
+contract_version = "1.0.0"
+core_bones = PackedStringArray("root", "pelvis", "spine", "chest", "neck", "head", "upper_arm_l", "lower_arm_l", "hand_l", "upper_arm_r", "lower_arm_r", "hand_r", "upper_leg_l", "lower_leg_l", "foot_l", "upper_leg_r", "lower_leg_r", "foot_r")
+root_bone = "root"
+forward_axis = "negative_z"
+up_axis = "y"
+meters_per_unit = 1.0
+sockets = [SubResource("SocketHead"), SubResource("SocketHandR")]
+external_bone_mapping = {"root": "root", "pelvis": "pelvis", "spine": "spine", "chest": "chest", "neck": "neck", "head": "head", "upper_arm_l": "upper_arm_l", "lower_arm_l": "lower_arm_l", "hand_l": "hand_l", "upper_arm_r": "upper_arm_r", "lower_arm_r": "lower_arm_r", "hand_r": "hand_r", "upper_leg_l": "upper_leg_l", "lower_leg_l": "lower_leg_l", "foot_l": "foot_l", "upper_leg_r": "upper_leg_r", "lower_leg_r": "lower_leg_r", "foot_r": "foot_r"}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GMSemanticMaterial" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/presentation/planar3d/gm_semantic_material.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Paper Semantic Material"
+content_id = "gm.presentation.semantic_material.paper.neutral"
+content_type_id = "gm.presentation.semantic_material"
+tags = PackedStringArray("neutral", "semantic", "paper")
+source = "gm_ext_3d_08_neutral"
+semantic_kind = "Paper"
+material_id = "gm.material.semantic.Paper.neutral"
+fallback_kind = "Paper"
+albedo_color = Color(0.92, 0.9, 0.78, 1)
+roughness = 0.98
+metallic = 0.0

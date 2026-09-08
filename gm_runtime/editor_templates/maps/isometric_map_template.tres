@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="GMMapResource" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/map/gm_map_resource.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/map/gm_map_layer_definition.gd" id="2"]
+
+[sub_resource type="Resource" id="Ground"]
+script = ExtResource("2")
+layer_id = &"ground"
+display_name_zh = "地表"
+kind = 0
+draw_order = 0
+
+[sub_resource type="Resource" id="Road"]
+script = ExtResource("2")
+layer_id = &"road"
+display_name_zh = "道路"
+kind = 1
+draw_order = 10
+
+[sub_resource type="Resource" id="Decoration"]
+script = ExtResource("2")
+layer_id = &"decoration"
+display_name_zh = "装饰"
+kind = 3
+draw_order = 20
+
+[sub_resource type="Resource" id="Logic"]
+script = ExtResource("2")
+layer_id = &"logic"
+display_name_zh = "逻辑层"
+kind = 4
+draw_order = 30
+
+[resource]
+script = ExtResource("1")
+map_id = &"gm.map_anchor.isometric_sample"
+grid_type = "isometric"
+map_size = Vector2i(12, 12)
+tile_size = Vector2i(64, 32)
+layers = Array[ExtResource("2")]([SubResource("Ground"), SubResource("Road"), SubResource("Decoration"), SubResource("Logic")])
+visual_cells = {"ground": {"0,0": 1, "1,0": 1}, "road": {"1,0": 2}, "decoration": {"2,1": 4}}
+logic_cells = {"0,0": {"ground_type": "stone", "walkable": true, "cost": 1.0, "water": false, "height_level": 0}, "2,1": {"ground_type": "ledge", "walkable": false, "cost": 2.0, "water": false, "height_level": 1}}
+layer_references = {"logic": ["gm.object.sample.isometric_agent"]}
