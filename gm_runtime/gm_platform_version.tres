@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GMPlatformVersion" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_platform_version.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+platform_version = "1.0.0"
+godot_baseline = "4.6.2-stable (official)"
+godot_build = "4.6.2.stable.official.71f334935"
+compatibility_target = "4.7.2-stable"
