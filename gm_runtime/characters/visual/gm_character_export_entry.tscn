@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_export_entry.gd" id="1"]
+[ext_resource type="Resource" path="res://samples/task11_characters/hero_complete.tres" id="2"]
+
+[node name="GMCharacterExportEntry" type="Node"]
+script = ExtResource("1")
+character_definition = ExtResource("2")
