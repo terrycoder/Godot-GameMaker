@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMProcessDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/process/gm_process_definition.gd" id="1_process_definition"]
+
+[resource]
+script = ExtResource("1_process_definition")
+definition_id = "gm.process.definition.neutral_work"
+revision = 1
+display_name_zh = "中性持续工序"
+process_family = "production"
+duration_units = 2
+capability_ids = PackedStringArray("gm.capability.process.work")
+facility_target = "gm.facility.neutral.workspot"
+completion_kind = "typed_domain_request"
+completion_payload = {
+"output_id": "gm.output.neutral",
+"request_type": "gm.domain.process.neutral.completed"
+}
+task_definition_id = "gm.task.process.neutral"
+duty_provider_id = "gm.duty.process.neutral"
