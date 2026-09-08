@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="GMMapSemanticResource" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_map_semantic_resource.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/map/gm_map_resource.gd" id="2"]
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_semantic_region.gd" id="3"]
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_semantic_route.gd" id="4"]
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_semantic_anchor.gd" id="5"]
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_semantic_portal.gd" id="6"]
+[ext_resource type="Script" path="res://gm_runtime/map/semantic/gm_camera_zone_config.gd" id="7"]
+
+[sub_resource type="Resource" id="Terrain"]
+script = ExtResource("2")
+map_id = &"gm.map_anchor.semantic_export"
+map_size = Vector2i(6, 4)
+tile_size = Vector2i(32, 32)
+logic_cells = {"0,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"1,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"2,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"3,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"4,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"5,0":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"0,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"1,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"2,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"3,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"4,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"5,1":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"0,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"1,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"2,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"3,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"4,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"5,2":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"0,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"1,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"2,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"3,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"4,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0},"5,3":{"ground_type":"floor","walkable":true,"cost":1.0,"water":false,"height_level":0}}
+
+[sub_resource type="Resource" id="Region"]
+script = ExtResource("3")
+region_id = &"gm.map_anchor.region.export_room"
+polygon = PackedVector2Array(0, 0, 192, 0, 192, 128, 0, 128)
+camera_config_id = &"gm.camera.export_room"
+
+[sub_resource type="Resource" id="Spawn"]
+script = ExtResource("5")
+anchor_id = &"gm.map_anchor.export_spawn"
+anchor_type_id = &"gm.anchor_type.spawn"
+position = Vector2(32, 32)
+
+[sub_resource type="Resource" id="Door"]
+script = ExtResource("5")
+anchor_id = &"gm.map_anchor.export_door"
+anchor_type_id = &"gm.anchor_type.portal"
+position = Vector2(160, 64)
+
+[sub_resource type="Resource" id="Route"]
+script = ExtResource("4")
+route_id = &"gm.map_anchor.route.export_patrol"
+map_id = &"gm.map_anchor.semantic_export"
+points = [{"position":Vector2(32,32),"speed":80.0,"wait":0.0,"anchor_id":"gm.map_anchor.export_spawn"},{"position":Vector2(160,64),"speed":90.0,"wait":0.5,"anchor_id":"gm.map_anchor.export_door"}]
+closed = true
+
+[sub_resource type="Resource" id="Portal"]
+script = ExtResource("6")
+portal_id = &"gm.map_anchor.portal.export"
+source_map_id = &"gm.map_anchor.semantic_export"
+source_anchor_id = &"gm.map_anchor.export_door"
+target_map_id = &"gm.map_anchor.semantic_export"
+target_anchor_id = &"gm.map_anchor.export_spawn"
+return_anchor_id = &"gm.map_anchor.export_door"
+direction = 1
+
+[sub_resource type="Resource" id="Camera"]
+script = ExtResource("7")
+camera_id = &"gm.camera.export_room"
+bounds = Rect2(0, 0, 192, 128)
+target_role_id = &"player"
+
+[resource]
+script = ExtResource("1")
+map_id = &"gm.map_anchor.semantic_export"
+terrain_map = SubResource("Terrain")
+regions = Array[ExtResource("3")]([SubResource("Region")])
+routes = Array[ExtResource("4")]([SubResource("Route")])
+anchors = Array[ExtResource("5")]([SubResource("Spawn"),SubResource("Door")])
+portals = Array[ExtResource("6")]([SubResource("Portal")])
+camera_zones = Array[ExtResource("7")]([SubResource("Camera")])
+surface_ids = PackedStringArray("gm.surface.planar_2d.gm.map_anchor.semantic_export")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GMAbilityDefinition" load_steps=2 format=3]
+
+[ext_resource path="res://gm_runtime/gas/gm_ability_definition.gd" type="Script" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "ability.object.press_mechanism"
+display_name_zh = "按压机关"
+ability_tags = PackedStringArray("ability.object.interact", "ability.object.mechanism")
+executor_service_id = "gm.object.interaction"
+resolver_id = "gm.object.interaction"
+fact_type = "gm.fact.object.interaction.committed"
+fact_source_system = "gm.object"
