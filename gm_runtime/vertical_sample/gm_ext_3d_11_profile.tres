@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="GMPlanar3DReleaseProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/vertical_sample/gm_planar3d_release_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+profile_id = "gm.profile.ext3d10.neutral_yard"
+display_name_zh = "Planar 3D 发布兼容中性小院"
+seed = 311260906
+map_id = "gm.map.ext3d10.neutral_yard"
+graph_id = "gm.graph.ext3d10.neutral_yard"
+entry_surface_id = "gm.surface.ext3d10.courtyard"
+scene_definition_id = "gm.scene_definition.ext3d10.neutral_yard"
+scene_recipe_id = "gm.recipe.ext3d10.neutral_yard"
+player_task_definition_id = "gm.definition.ext3d10.neutral_work"
+task_definition_id = "gm.definition.ext3d10.workflow"
+player_target_workspot_id = "gm.workspot.ext3d10.workshop.main"
+attack_id = "gm.attack.ext3d10.neutral_projectile"
+save_path = "user://gm_ext3d11_neutral_yard.world.json"
+release_id = "gm.release.ext3d11.planar3d"
+release_version = "1.0.0"
+module_manifest_index = "res://gm_runtime/manifests/gm_ext_3d_11_manifest_index.tres"
+two_d_manifest_index = "res://gm_runtime/manifests/gm_ext_3d_11_2d_manifest_index.tres"
+enabled_entry_scene = "res://gm_runtime/vertical_sample/gm_ext_3d_11_entry.tscn"
+disabled_entry_scene = "res://gm_runtime/vertical_sample/gm_ext_3d_11_2d_entry.tscn"
+cache_schema = "gm.character.visual_compile_cache.v1"
+budget_profile_path = "res://gm_runtime/vertical_sample/gm_ext_3d_11_budget_profile.tres"

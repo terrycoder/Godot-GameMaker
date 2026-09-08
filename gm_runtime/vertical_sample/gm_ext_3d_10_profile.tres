@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GMNeutralVerticalSampleProfile" format=3 uid="uid://dp1jxpq8d1gyy"]
+
+[ext_resource type="Script" uid="uid://ew5qvgsmab04" path="res://gm_runtime/vertical_sample/gm_neutral_vertical_sample_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+temporarily_disabled_connection_ids = PackedStringArray()

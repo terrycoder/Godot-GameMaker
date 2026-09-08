@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="GMCharacterVisualBudgetProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_character_visual_budget_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "EXT11 Planar3D 视觉预算"
+near_distance = 12.0
+far_distance = 32.0
+hysteresis = 1.0
+max_visible_animated_characters = 30
+max_full_quality_characters = 10
+max_skinned_meshes = 60
+animation_update_budget = 20
+feature_module_budget = 20
+mid_sampling_hz = 12.0
+far_sampling_hz = 8.0
+animation_budget_ms = 4.0
+frame_warning_ms = 33.4
+world_viewport_resolution = Vector2i(640, 360)
+

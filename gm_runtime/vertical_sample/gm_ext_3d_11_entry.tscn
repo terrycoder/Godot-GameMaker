@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/vertical_sample/gm_ext_3d_11_release.gd" id="1"]
+[ext_resource type="Resource" path="res://gm_runtime/player_shell/configurations/ext3d10_neutral_yard.tres" id="2"]
+[ext_resource type="Resource" path="res://gm_runtime/vertical_sample/gm_ext_3d_11_profile.tres" id="3"]
+
+[node name="GMEXT3D11Planar3DRelease" type="Node"]
+script = ExtResource("1")
+shell_configuration = ExtResource("2")
+sample_profile = ExtResource("3")
+
