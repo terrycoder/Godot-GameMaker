@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMTemplateDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/gm_editor/templates/gm_template_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+template_id = "management"
+display_name_zh = "经营管理"
+description_zh = "以建筑、仓库、配方、生产设备和工作点为主的普通生产链工作台。"
+layout_sections = PackedStringArray("map", "building", "resource", "production", "character", "ability", "task")
+terminology = {"home":"项目首页", "map":"地图", "character":"角色", "ability":"能力", "resource":"资源与仓库", "task":"任务与事件", "health":"项目健康", "wizard":"创建向导", "building":"建筑", "production":"生产链"}
+required_terminology_keys = PackedStringArray("home", "map", "character", "ability", "resource", "task", "health", "wizard", "building", "production")
+common_ability_bundles = PackedStringArray("移动", "交互", "工作", "生产", "存档")
+creation_wizards = [{"id":"building", "label":"新建建筑", "description":"建立建筑、工作点和能力组合"}, {"id":"recipe", "label":"新建配方", "description":"配置普通生产链的输入与输出"}, {"id":"storage", "label":"新建仓库", "description":"建立资源容器和容量规则"}]
+validation_rules = PackedStringArray("生产链必须声明输入输出", "仓库必须可定位", "不默认开启大规模人口模块", "模板切换不删除内容")
+required_modules = PackedStringArray("core")
+default_enabled_modules = PackedStringArray("core")
+optional_modules = PackedStringArray()
+preserved_content_kinds = PackedStringArray("map", "building", "resource", "production", "character", "ability", "task")
+help_entry_id = "production"

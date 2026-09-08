@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMTemplateDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/gm_editor/templates/gm_template_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+template_id = "rpg_arpg"
+display_name_zh = "传统 RPG / ARPG"
+description_zh = "以角色、能力、装备、掉落、任务和战斗区域为主的中文策划入口。"
+layout_sections = PackedStringArray("map", "character", "ability", "resource", "task", "equipment", "combat")
+terminology = {"home":"项目首页", "map":"地图", "character":"角色", "ability":"能力", "resource":"物品与资源", "task":"任务与剧情", "health":"项目健康", "wizard":"创建向导", "equipment":"装备", "combat":"战斗区域"}
+required_terminology_keys = PackedStringArray("home", "map", "character", "ability", "resource", "task", "health", "wizard", "equipment", "combat")
+common_ability_bundles = PackedStringArray("移动", "交互", "攻击", "装备", "掉落", "对话")
+creation_wizards = [{"id":"character", "label":"新建角色", "description":"选择身份与能力组合，不复制角色运行时"}, {"id":"ability", "label":"新建能力", "description":"配置触发、条件、步骤与表现提示"}, {"id":"quest", "label":"新建任务", "description":"建立目标、事件和完成条件"}]
+validation_rules = PackedStringArray("角色必须有能力组合", "装备必须引用内容 ID", "战斗区域必须可定位", "模板切换不删除内容")
+required_modules = PackedStringArray("core")
+default_enabled_modules = PackedStringArray("core")
+optional_modules = PackedStringArray()
+preserved_content_kinds = PackedStringArray("map", "character", "ability", "resource", "task", "equipment", "combat")
+help_entry_id = "character"
