@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GMProjectProfile" format=3 uid="uid://c668by7v3er3v"]
+
+[ext_resource type="Script" uid="uid://o01j0fawi6y7" path="res://gm_runtime/gm_project_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enabled_modules = PackedStringArray("core")

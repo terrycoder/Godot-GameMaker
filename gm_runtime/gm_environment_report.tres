@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GMEnvironmentReport" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_environment_report.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+actual_godot = "4.6.2-stable (official)"
+required_godot = "4.6.2-stable (user-corrected main baseline)"
+compatibility_godot = "4.7.2-stable (independent trial)"
+result = "candidate_validation_pending"
+plugin_observation_schema = "gm.plugin-observation.v2"
+pending_candidate_policy = "visible_limited_not_verified"
