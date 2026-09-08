@@ -1,0 +1,11 @@
+{
+  "ability_id": "gm.ability.movement",
+  "agent_id": "gm.agent.sample.capture",
+  "attention_capacity": 64,
+  "department_id": "gm.department.sample.operations",
+  "free_action_id": "gm.free_action.sample.rest",
+  "retry_trigger": "task_changed",
+  "role_id": "gm.role.sample.generalist",
+  "schedule_id": "gm.schedule.sample.day",
+  "schema": "gm.agent_planner.workbench.v1"
+}

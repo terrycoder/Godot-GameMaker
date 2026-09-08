@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="GMMovementProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/movement/gm_movement_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+speed = 120.0
+acceleration = 480.0
+stop_distance = 4.0
+follow_distance = 30.0
+map_id = "map.neutral.alpha"
+anchor_id = "anchor.destination"
+follow_actor_id = "actor.player"
+patrol_route_id = "route.neutral.loop"
+patrol_loop = true
+target_map_id = "map.neutral.beta"
+entry_anchor_id = "anchor.entry"
+exit_anchor_id = "anchor.exit"
+return_anchor_id = "anchor.return"

@@ -1,0 +1,122 @@
+[gd_resource type="Resource" script_class="GMCharacterDefinition" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_definition.gd" id="1_def"]
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_visual_set_2d.gd" id="2_visual"]
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_action_slot_2d.gd" id="3_action"]
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_frame_event.gd" id="4_event"]
+[ext_resource type="Script" path="res://gm_runtime/characters/visual/gm_character_anchor_track_2d.gd" id="5_anchor"]
+[ext_resource type="Texture2D" path="res://samples/task11_characters/hero_sprite.svg" id="6_tex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_main"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}],
+"loop": true,
+"name": &"idle_down",
+"speed": 4.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"idle_left", "speed": 4.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"idle_right", "speed": 4.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"idle_up", "speed": 4.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"move_down", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"move_left", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"move_right", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": true, "name": &"move_up", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"attack_down", "speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"attack_left", "speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"attack_right", "speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"attack_up", "speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"hurt_down", "speed": 7.0
+}, {
+"frames": [{"duration": 1.0, "texture": ExtResource("6_tex")}, {"duration": 1.0, "texture": ExtResource("6_tex")}], "loop": false, "name": &"death_down", "speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Event_attack"]
+script = ExtResource("4_event")
+event_name = &"attack_hit"
+event_kind = &"hit"
+frame_index = 1
+payload = {"cue": "gm.cue.combat.hit.light"}
+
+[sub_resource type="Resource" id="Action_idle"]
+script = ExtResource("3_action")
+semantic = &"idle"
+animation_by_direction = {"down": &"idle_down", "left": &"idle_left", "right": &"idle_right", "up": &"idle_up"}
+frame_rate = 4.0
+
+[sub_resource type="Resource" id="Action_move"]
+script = ExtResource("3_action")
+semantic = &"move"
+animation_by_direction = {"down": &"move_down", "left": &"move_left", "right": &"move_right", "up": &"move_up"}
+frame_rate = 8.0
+
+[sub_resource type="Resource" id="Action_attack"]
+script = ExtResource("3_action")
+semantic = &"attack"
+animation_by_direction = {"down": &"attack_down", "left": &"attack_left", "right": &"attack_right", "up": &"attack_up"}
+frame_rate = 10.0
+loop = false
+events = [SubResource("Event_attack")]
+
+[sub_resource type="Resource" id="Action_hurt"]
+script = ExtResource("3_action")
+semantic = &"hurt"
+direction_mode = &"one"
+animation_by_direction = {"any": &"hurt_down"}
+frame_rate = 7.0
+loop = false
+
+[sub_resource type="Resource" id="Action_death"]
+script = ExtResource("3_action")
+semantic = &"death"
+direction_mode = &"one"
+animation_by_direction = {"any": &"death_down"}
+frame_rate = 5.0
+loop = false
+
+[sub_resource type="Resource" id="Anchor_weapon"]
+script = ExtResource("5_anchor")
+anchor_name = &"weapon"
+anchor_kind = &"weapon"
+positions = {"attack/down": [Vector2(20, 0), Vector2(34, -8)], "attack/left": [Vector2(-20, 0), Vector2(-34, -8)], "attack/right": [Vector2(20, 0), Vector2(34, -8)], "attack/up": [Vector2(12, -28), Vector2(24, -38)], "*/*": [Vector2(16, 2), Vector2(18, 0)]}
+
+[sub_resource type="Resource" id="Anchor_overhead"]
+script = ExtResource("5_anchor")
+anchor_name = &"overhead_ui"
+anchor_kind = &"overhead_ui"
+positions = {"*/*": [Vector2(0, -50), Vector2(0, -50)]}
+
+[sub_resource type="Resource" id="Visual_main"]
+script = ExtResource("2_visual")
+visual_set_id = "hero.blue.default"
+display_name_zh = "蓝衣冒险者"
+art_style = &"vector"
+category = &"hero"
+tags = PackedStringArray("four_direction", "weapon_anchor")
+main_image = ExtResource("6_tex")
+avatar = ExtResource("6_tex")
+portrait = ExtResource("6_tex")
+sprite_frames = SubResource("SpriteFrames_main")
+actions = [SubResource("Action_idle"), SubResource("Action_move"), SubResource("Action_attack"), SubResource("Action_hurt"), SubResource("Action_death")]
+anchors = [SubResource("Anchor_weapon"), SubResource("Anchor_overhead")]
+
+[resource]
+script = ExtResource("1_def")
+display_name_zh = "示例冒险者"
+content_id = "sample.character.hero"
+content_type_id = "gm.character.definition"
+tags = PackedStringArray("sample", "playable")
+visual_sets = [SubResource("Visual_main")]
+default_visual_set_id = "hero.blue.default"
+usage_locations = PackedStringArray("samples/task11_preview", "samples/task10_objects/object_map")
+identity_configuration_label = "玩家身份配置（外观替换不修改稳定实例ID或能力）"

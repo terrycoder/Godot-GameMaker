@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[node name="Task10ObjectMap" type="Node2D"]
+metadata/gm_map_id = "map.task10.sample"
+
+[node name="Objects" type="Node2D" parent="."]

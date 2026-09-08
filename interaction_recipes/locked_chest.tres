@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GMInteractionRecipe" load_steps=2 format=3]
+
+[ext_resource path="res://interaction_recipes/gm_interaction_recipe.gd" type="Script" id="1"]
+
+[resource]
+script = ExtResource("1")
+recipe_id = "recipe.chest.locked_open"
+interaction_kind = "chest"
+ability_id = "ability.object.open_locked_chest"
+required_item_id = "item.key.iron"
+blocked_state = {"opened": true}
+success_state_patch = {"opened": true, "loot_claimed": true}
+required_payload_keys = PackedStringArray("loot_table_id")
+event_tag = "event.object.chest_opened"
+cue_id = "cue.object.chest_open"

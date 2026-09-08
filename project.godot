@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GameMaker Platform Lab"
+run/main_scene="res://gm_runtime/gm_minimal_entry.tscn"
+config/features=PackedStringArray("4.6")
+run/main_scene.planar3d="res://gm_runtime/vertical_sample/gm_ext_3d_11_entry.tscn"
+run/main_scene.planar2d="res://gm_runtime/vertical_sample/gm_ext_3d_11_2d_entry.tscn"
+
+[display]
+
+window/size/viewport_width=1100
+window/size/viewport_height=700
+window/size/window_width_override=1100
+window/size/window_height_override=700
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gm_editor/plugin.cfg", "res://addons/gm_agent_planner/plugin.cfg", "res://addons/gm_feedback/plugin.cfg", "res://addons/gm_p26_vertical_sample/plugin.cfg")
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

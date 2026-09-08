@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GMInteractionRecipe" load_steps=2 format=3]
+
+[ext_resource path="res://interaction_recipes/gm_interaction_recipe.gd" type="Script" id="1"]
+
+[resource]
+script = ExtResource("1")
+recipe_id = "recipe.pickup.collect"
+interaction_kind = "pickup"
+ability_id = "ability.object.pickup"
+blocked_state = {"collected": true}
+success_state_patch = {"collected": true}
+required_payload_keys = PackedStringArray("item_id")
+event_tag = "event.object.picked_up"
+cue_id = "cue.object.pickup"

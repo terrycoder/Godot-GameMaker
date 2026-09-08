@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GMInteractionRecipe" load_steps=2 format=3]
+
+[ext_resource path="res://interaction_recipes/gm_interaction_recipe.gd" type="Script" id="1"]
+
+[resource]
+script = ExtResource("1")
+recipe_id = "recipe.door.open"
+interaction_kind = "door"
+ability_id = "ability.object.open_door"
+blocked_state = {"opened": true}
+success_state_patch = {"opened": true}
+event_tag = "event.object.door_opened"
+cue_id = "cue.object.door_open"

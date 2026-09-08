@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="GMP26SampleRules" format=3 uid="uid://vs72b3axstef"]
+
+[ext_resource type="Script" uid="uid://62u51fp3gxia" path="res://gm_runtime/vertical_sample/p26/gm_p26_sample_rules.gd" id="1"]
+
+[resource]
+script = ExtResource("1")

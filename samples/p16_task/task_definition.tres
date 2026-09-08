@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GMTaskDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/tasks/gm_task_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+definition_id = "gm.task.definition.sample_transport"
+display_name_zh = "搬运三份样板资源"
+description_zh = "通过统一能力请求搬运样板资源，并由已提交事实推进目标。"
+objectives = Array[Dictionary]([{"contribution_field":"amount","display_name_zh":"搬运三份样板资源","objective_id":"gm.objective.sample_transport","signal_kind":"fact","signal_type":"gm.fact.inventory.transferred","target_match":{"resource_id":"gm.sample.resource.neutral"},"target_value":3}])
+allowed_source_types = Array[String](["player", "ai", "organization", "world_event", "script", "duty_provider"])
+default_context_mode = "local"
+reservation_rules = Array[Dictionary]([{"capacity":1,"mode":"exclusive","rule_id":"gm.reservation_rule.sample_resource","subject":{"id":"gm.resource.shared","type":"resource"}},{"capacity":10,"mode":"capacity","rule_id":"gm.reservation_rule.sample_capacity","subject":{"id":"gm.resource.capacity_pool","type":"resource"}}])
+workbench_profile = {"assignee":{"id":"gm.actor.sample","type":"actor"},"assignment_id":"gm.assignment.sample.workbench","assignment_kind":"actor","parent_task_id":"","provider":{"event_type":"gm.fact.duty.condition","key_field":"duty_key","provider_id":"gm.duty.sample_workbench","subject":{"id":"gm.resource.sample_duty","type":"resource"}},"reservation":{"amount":1,"expires_at_tick":10,"reservation_id":"gm.reservation.sample_workbench","rule_id":"gm.reservation_rule.sample_resource"},"source_type":"player","task_id":"gm.task.sample.workbench"}

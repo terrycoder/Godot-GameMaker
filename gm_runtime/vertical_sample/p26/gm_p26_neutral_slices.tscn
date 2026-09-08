@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/vertical_sample/p26/gm_p26_neutral_slices.gd" id="1"]
+[ext_resource type="Resource" path="res://gm_runtime/player_shell/configurations/ext3d10_neutral_yard.tres" id="2"]
+[ext_resource type="Resource" path="res://gm_runtime/vertical_sample/gm_ext_3d_10_profile.tres" id="3"]
+[ext_resource type="Resource" path="res://gm_runtime/vertical_sample/p26/gm_p26_sample_rules.tres" id="4"]
+
+[node name="P26NeutralSlices" type="Node"]
+script = ExtResource("1")
+sample_profile = ExtResource("3")
+shell_configuration = ExtResource("2")
+planning_rules = ExtResource("4")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="GMObjectDefinition" load_steps=5 format=3]
+
+[ext_resource path="res://gm_runtime/objects/gm_object_definition.gd" type="Script" id="1"]
+[ext_resource path="res://interaction_recipes/door.tres" type="Resource" id="2"]
+[ext_resource path="res://gm_runtime/objects/abilities/open_door.tres" type="Resource" id="3"]
+
+[sub_resource type="RectangleShape2D" id="Shape"]
+size = Vector2(32, 64)
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "普通门"
+content_id = "object.door.plain"
+content_type_id = "gm.object_definition"
+tags = PackedStringArray("object", "door")
+ability_package_ids = PackedStringArray("ability.object.open_door")
+object_kind = "door"
+ability_definitions = [ExtResource("3")]
+interaction_recipe = ExtResource("2")
+collision_shape = SubResource("Shape")
+persistent = true
+semantic_type_id = &"object.door"
+state_defaults = {"opened": false}
