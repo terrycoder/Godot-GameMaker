@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GMWorkbenchSubject" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/editor_templates/workbench/workbench_subject.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+project_name_zh = "策划工作台示例"
+scene_note_zh = "策划模式与高级 Inspector 共同编辑这份 Resource"
+map_names = PackedStringArray("起始地图")
+character_names = PackedStringArray("示例角色")
+ability_names = PackedStringArray("移动", "交互")
+resource_names = PackedStringArray("基础资源")
+task_names = PackedStringArray("欢迎任务")
+change_marker = "初始值"
+revision = 1
