@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GMRoleProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/gm_role_profile.gd" id="1_role"]
+
+[resource]
+script = ExtResource("1_role")
+role_id = "merchant"
+display_name_zh = "商人"
+enabled_control_sources = PackedStringArray("ai", "player", "story", "debug")
+interaction_config = {"interaction_tag": "gm.event.character.interact"}
+ui_config = {"label": "商人"}
