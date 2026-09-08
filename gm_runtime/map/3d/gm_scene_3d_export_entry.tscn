@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/map/3d/gm_scene_3d_export_entry.gd" id="1_export"]
+
+[node name="GMScene3DExportEntry" type="Node"]
+script = ExtResource("1_export")
