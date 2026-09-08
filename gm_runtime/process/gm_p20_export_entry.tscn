@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/process/gm_p20_export_entry.gd" id="1_p20_export"]
+
+[node name="P20ExportEntry" type="Node"]
+script = ExtResource("1_p20_export")
