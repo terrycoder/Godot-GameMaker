@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.feature_asset"
+display_name_zh = "角色 Feature 部件"
+generated_class_name = "GMFeatureAsset"
+base_class_name = "GMCharacterPart"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_feature_asset.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_feature_asset.gd"
+editable_fields = PackedStringArray("mesh_asset_id", "mesh", "attach_mode", "attachment_socket_id", "required_core_bones")
+editable_field_labels_zh = PackedStringArray("Mesh 资产", "渲染 Mesh", "连接方式", "连接 Socket", "核心骨骼要求")
+editable_field_help_zh = PackedStringArray("稳定 Mesh 资产 ID。", "Feature 可渲染资源。", "使用 Socket/Surface/World，不强制 Skeleton。", "可选 Socket 连接。", "必须为空；Feature 不得强制加入核心骨骼。")
+registration_version = "1.0.0"
+description_zh = "通用 Feature 资源；不把物种或项目特征写入 GM 核心骨骼。"

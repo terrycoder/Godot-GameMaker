@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMAccessoryAsset" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_accessory_asset.gd" id="1"]
+
+[sub_resource type="BoxMesh" id="AccessoryMesh"]
+size = Vector3(0.12, 0.12, 0.12)
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Accessory"
+content_id = "gm.character.accessory.neutral"
+content_type_id = "gm.character.accessory_asset"
+tags = PackedStringArray("neutral", "accessory")
+part_slot = "accessory"
+mesh_asset_id = "gm.asset.mesh.neutral_accessory"
+mesh = SubResource("AccessoryMesh")
+attachment_socket_id = "gm.character.socket.hand_r"
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+accessory_category = "prop"
+optional = true

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMCharacterVisualRecipe" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_character_visual_recipe.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性角色视觉配方"
+content_id = "gm.character.visual_recipe.neutral"
+content_type_id = "gm.character.visual_recipe"
+tags = PackedStringArray("neutral", "character", "recipe")
+recipe_schema = "gm.character.visual_recipe.v1"
+body_profile_id = "gm.character.body.neutral"
+head_part_id = "gm.character.head.neutral"
+hair_part_id = "gm.character.hair.neutral"
+outfit_part_id = "gm.character.outfit.neutral"
+feature_part_ids = PackedStringArray("gm.character.feature.neutral")
+accessory_part_ids = PackedStringArray("gm.character.accessory.neutral")
+posture_profile_id = "gm.character.posture.neutral"
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+animation_profile_id = "gm.character.animation_profile.neutral"

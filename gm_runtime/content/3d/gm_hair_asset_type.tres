@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.hair_asset"
+display_name_zh = "角色 Hair 部件"
+generated_class_name = "GMHairAsset"
+base_class_name = "GMCharacterPart"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_hair_asset.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_hair_asset.gd"
+editable_fields = PackedStringArray("mesh_asset_id", "mesh", "attachment_socket_id", "skeleton_contract_id")
+editable_field_labels_zh = PackedStringArray("Mesh 资产", "渲染 Mesh", "头部 Socket", "Skeleton 合同")
+editable_field_help_zh = PackedStringArray("稳定 Mesh 资产 ID。", "Hair 可渲染资源。", "按 Socket 连接，不改变核心骨骼。", "可选的共享 Skeleton 合同。")
+registration_version = "1.0.0"
+description_zh = "中性角色发型资源。"

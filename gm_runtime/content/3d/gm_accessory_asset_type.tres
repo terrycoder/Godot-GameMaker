@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.accessory_asset"
+display_name_zh = "角色 Accessory 部件"
+generated_class_name = "GMAccessoryAsset"
+base_class_name = "GMCharacterPart"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_accessory_asset.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_accessory_asset.gd"
+editable_fields = PackedStringArray("mesh_asset_id", "mesh", "accessory_category", "attachment_socket_id")
+editable_field_labels_zh = PackedStringArray("Mesh 资产", "渲染 Mesh", "Accessory 类别", "连接 Socket")
+editable_field_help_zh = PackedStringArray("稳定 Mesh 资产 ID。", "Accessory 可渲染资源。", "通用饰品类别，不绑定项目题材。", "连接已声明 Socket。")
+registration_version = "1.0.0"
+description_zh = "通用可选饰品资源。"

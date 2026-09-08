@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GMAnimationLibrary" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_animation_library.gd" id="1"]
+[ext_resource type="Resource" path="res://gm_runtime/content/3d/neutral/animation_profile_neutral.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性共享动画库"
+content_id = "gm.character.animation_library.neutral"
+content_type_id = "gm.character.animation_library"
+tags = PackedStringArray("neutral", "animation", "shared")
+library_version = "1.0.0"
+animation_asset_ids = PackedStringArray("gm.asset.animation.neutral.attack", "gm.asset.animation.neutral.death", "gm.asset.animation.neutral.greet", "gm.asset.animation.neutral.hit", "gm.asset.animation.neutral.hurt", "gm.asset.animation.neutral.idle", "gm.asset.animation.neutral.interact", "gm.asset.animation.neutral.talk", "gm.asset.animation.neutral.walk", "gm.asset.animation.neutral.wave", "gm.asset.animation.neutral.work_idle", "gm.asset.animation.neutral.work_use")
+profiles = [ExtResource("2")]

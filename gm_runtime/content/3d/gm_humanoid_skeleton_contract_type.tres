@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.humanoid_skeleton_contract"
+display_name_zh = "Humanoid Skeleton 合同"
+generated_class_name = "GMHumanoidSkeletonContract"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_humanoid_skeleton_contract.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_humanoid_skeleton_contract.gd"
+editable_fields = PackedStringArray("contract_version", "core_bones", "root_bone", "forward_axis", "up_axis", "meters_per_unit", "sockets", "external_bone_mapping")
+editable_field_labels_zh = PackedStringArray("合同版本", "核心骨骼", "Root 骨骼", "角色朝向", "上方向", "Scale", "Socket 列表", "外部动画映射")
+editable_field_help_zh = PackedStringArray("只能使用平台支持的合同版本。", "固定核心骨骼集合；Feature 不得强制写入。", "必须是核心骨骼之一。", "统一角色朝向轴。", "统一世界上方向。", "米/单位的稳定尺度。", "按骨骼声明可选 Socket。", "把外部动画骨骼映射到 GM 核心骨骼。")
+registration_version = "1.0.0"
+description_zh = "包含核心骨、朝向、Scale、Root、Socket 与外部动画映射的可验证合同。"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GMBodyProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_body_profile.gd" id="1"]
+
+[sub_resource type="CapsuleMesh" id="BodyMesh"]
+radius = 0.34
+height = 1.35
+rings = 8
+radial_segments = 12
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Body"
+content_id = "gm.character.body.neutral"
+content_type_id = "gm.character.body_profile"
+tags = PackedStringArray("neutral", "humanoid", "body")
+body_mesh_asset_id = "gm.asset.mesh.neutral_body"
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+body_fit_class_id = "gm.character.fit.standard"
+posture_profile_id = "gm.character.posture.neutral"
+height_meters = 1.8
+mesh = SubResource("BodyMesh")

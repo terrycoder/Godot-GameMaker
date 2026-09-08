@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GMBodyFitClass" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_body_fit_class.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "标准体型适配"
+content_id = "gm.character.fit.standard"
+content_type_id = "gm.character.body_fit_class"
+tags = PackedStringArray("neutral", "fit")
+fit_id = "standard"
+height_scale = 1.0
+width_scale = 1.0
+outfit_clearance = 0.04

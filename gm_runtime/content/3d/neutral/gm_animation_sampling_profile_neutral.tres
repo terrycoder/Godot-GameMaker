@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GMAnimationSamplingProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/presentation/planar3d/gm_animation_sampling_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性Pose Sampling Profile"
+content_id = "gm.presentation.pose_sampling.neutral"
+content_type_id = "gm.presentation.animation_sampling_profile"
+tags = PackedStringArray("neutral", "presentation", "pose")
+content_version = "1.0.0"
+source = "gm_ext_3d_08_neutral"
+sampling_mode = "Smooth"
+samples_per_cycle = 0
+interpolation = "linear"

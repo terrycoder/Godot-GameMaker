@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.visual_recipe"
+display_name_zh = "3D 角色视觉配方"
+generated_class_name = "GMCharacterVisualRecipe"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_character_visual_recipe.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_character_visual_recipe.gd"
+editable_fields = PackedStringArray("body_profile_id", "head_part_id", "hair_part_id", "outfit_part_id", "feature_part_ids", "accessory_part_ids", "posture_profile_id", "skeleton_contract_id", "animation_profile_id")
+editable_field_labels_zh = PackedStringArray("Body Profile", "Head", "Hair", "Outfit", "Feature 列表", "Accessory 列表", "Posture Profile", "Skeleton 合同", "Animation Profile")
+editable_field_help_zh = PackedStringArray("只保存 Body Profile 稳定引用。", "只保存 Head 部件稳定引用。", "只保存 Hair 部件稳定引用。", "只保存 Outfit 部件稳定引用。", "可选 Feature 引用；不强制核心骨骼。", "可选 Accessory 引用。", "只保存姿态 Profile 引用。", "只保存 Humanoid Skeleton 合同引用。", "只保存共享动画 Profile 引用，不复制 Animation。")
+registration_version = "1.0.0"
+description_zh = "只保存角色部件与 Profile 引用，不持有运行时节点。"

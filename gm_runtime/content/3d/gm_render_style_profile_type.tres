@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.presentation.render_style_profile"
+display_name_zh = "3D Render Style Profile"
+generated_class_name = "GMRenderStyleProfile"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/presentation/planar3d/gm_render_style_profile.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/presentation/planar3d/gm_render_style_profile.gd"
+editable_fields = PackedStringArray("material_mapping_id", "lighting_model", "outline_enabled", "outline_width", "palette_id", "dither_enabled", "dither_pattern", "post_process_enabled", "shadow_mode", "world_render_resolution", "ui_render_resolution", "upscale_filter", "pose_sampling_profile_id", "pose_sampling_mode", "pose_sampling_rate")
+editable_field_labels_zh = PackedStringArray("Material Mapping", "Lighting Model", "启用Outline", "Outline Width", "Palette", "启用Dither", "Dither Pattern", "启用PostProcess", "Shadow Mode", "World Render Resolution", "UI Native Resolution", "Upscale Filter", "Pose Sampling Profile", "Pose Sampling Mode", "Pose Sampling Rate")
+editable_field_help_zh = PackedStringArray("语义材质只通过稳定ID解析。", "选择flat、lambert或toon。", "只影响视觉表现。", "限定在0到0.2。", "调色板稳定ID。", "只影响World Viewport。", "正式放大链只使用nearest。", "不保存运行时后处理对象。", "选择none、blob或soft。", "只用于3D World低分辨率View。", "UI不跟随World低分辨率。", "EXT08正式合同只允许nearest。", "Skeleton呈现采样Profile。", "只能使用8、10、12、15或Smooth。", "固定模式必须与模式一致。")
+registration_version = "1.0.0"
+description_zh = "参数化Lighting、Outline、Palette、Dither、PostProcess、Shadow、Resolution和Pose Sampling。"

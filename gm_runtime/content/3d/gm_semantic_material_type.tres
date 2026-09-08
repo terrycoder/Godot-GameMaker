@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.presentation.semantic_material"
+display_name_zh = "Semantic Material"
+generated_class_name = "GMSemanticMaterial"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/presentation/planar3d/gm_semantic_material.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/presentation/planar3d/gm_semantic_material.gd"
+editable_fields = PackedStringArray("semantic_kind", "material_id", "fallback_kind", "albedo_color", "roughness", "metallic", "texture_content_id")
+editable_field_labels_zh = PackedStringArray("语义种类", "材质ID", "降级语义", "基础颜色", "粗糙度", "金属度", "纹理内容ID")
+editable_field_help_zh = PackedStringArray("只能是Wood、Stone、Cloth、Skin、Hair、Metal、Ceramic、Paper、Plant、Water。", "稳定材质ID，不保存运行时Material。", "缺少资源时的确定性视觉降级。", "中性视觉颜色。", "0到1。", "0到1。", "可选的内容资源引用。")
+registration_version = "1.0.0"
+description_zh = "用中性语义描述可替换材质，避免项目美术内容成为平台规则。"

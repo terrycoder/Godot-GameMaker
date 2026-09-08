@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.animation_library"
+display_name_zh = "共享动画库"
+generated_class_name = "GMAnimationLibrary"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_animation_library.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_animation_library.gd"
+editable_fields = PackedStringArray("library_version", "animation_asset_ids", "profiles")
+editable_field_labels_zh = PackedStringArray("库版本", "共享 Animation 资产", "Animation Profile")
+editable_field_help_zh = PackedStringArray("共享库的版本。", "库中可复用的 Animation 稳定 ID。", "按角色 Profile 映射 Locomotion/Work/Interaction/Social/Combat/Reaction。")
+registration_version = "1.0.0"
+description_zh = "角色只引用共享动画库，不保存独立动画副本。"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.body_profile"
+display_name_zh = "3D 角色 Body Profile"
+generated_class_name = "GMBodyProfile"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_body_profile.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_body_profile.gd"
+editable_fields = PackedStringArray("body_mesh_asset_id", "skeleton_contract_id", "body_fit_class_id", "posture_profile_id", "height_meters", "mesh")
+editable_field_labels_zh = PackedStringArray("Body Mesh 资产", "Skeleton 合同", "Body FitClass", "Posture Profile", "身体高度", "渲染 Mesh")
+editable_field_help_zh = PackedStringArray("引用现有 Asset Registry 的 Mesh 稳定 ID。", "绑定 Humanoid Skeleton 合同。", "多个 Body 共享的体型适配类别。", "只调整 Idle/Spine/Walk 等语义姿态。", "用于导入和尺度校验。", "中性 Body 的可渲染资源。")
+registration_version = "1.0.0"
+description_zh = "声明式身体资源，引用共享 FitClass、Skeleton 和 Posture。"

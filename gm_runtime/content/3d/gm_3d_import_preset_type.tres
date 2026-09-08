@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.import_preset"
+display_name_zh = "3D 标准导入 Preset"
+generated_class_name = "GM3DImportPreset"
+base_class_name = "Resource"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_3d_import_preset.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_3d_import_preset.gd"
+editable_fields = PackedStringArray("preset_id", "display_name_zh", "asset_family", "scale_meters_per_unit", "pivot_policy", "material_policy", "collision_policy", "generate_lod")
+editable_field_labels_zh = PackedStringArray("Preset 稳定 ID", "中文名称", "资产类别", "导入 Scale", "Pivot 策略", "材质策略", "碰撞策略", "生成 LOD")
+editable_field_help_zh = PackedStringArray("跨重导入保持不变的 Preset ID。", "正式中文显示名称。", "角色/环境/Prop/Animation/Vegetation。", "统一米/单位尺度。", "Root 或 Ground 原点策略。", "保留或使用平台材质 Profile。", "角色胶囊、静态网格或自定义碰撞。", "是否生成稳定 LOD 资源。")
+registration_version = "1.0.0"
+description_zh = "覆盖角色、环境、Prop、Animation、Vegetation 的标准导入参数。"

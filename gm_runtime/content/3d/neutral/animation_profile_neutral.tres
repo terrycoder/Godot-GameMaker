@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GMAnimationProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_animation_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性角色 Animation Profile"
+content_id = "gm.character.animation_profile.neutral"
+content_type_id = "gm.character.animation_profile"
+tags = PackedStringArray("neutral", "animation", "shared")
+animation_library_id = "gm.character.animation_library.neutral"
+semantic_action_map = {
+"locomotion.idle": "gm.asset.animation.neutral.idle",
+"locomotion.walk": "gm.asset.animation.neutral.walk",
+"work.idle": "gm.asset.animation.neutral.work_idle",
+"work.use": "gm.asset.animation.neutral.work_use",
+"interaction.greet": "gm.asset.animation.neutral.greet",
+"interaction.use": "gm.asset.animation.neutral.interact",
+"social.wave": "gm.asset.animation.neutral.wave",
+"social.talk": "gm.asset.animation.neutral.talk",
+"combat.attack": "gm.asset.animation.neutral.attack",
+"combat.hit": "gm.asset.animation.neutral.hit",
+"reaction.hurt": "gm.asset.animation.neutral.hurt",
+"reaction.death": "gm.asset.animation.neutral.death"
+}
+fallback_by_category = {"locomotion": "gm.asset.animation.neutral.idle", "work": "gm.asset.animation.neutral.work_idle", "interaction": "gm.asset.animation.neutral.greet", "social": "gm.asset.animation.neutral.talk", "combat": "gm.asset.animation.neutral.hit", "reaction": "gm.asset.animation.neutral.hurt"}

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="GMRenderStyleProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/presentation/planar3d/gm_render_style_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性EXT08 Render Style Profile"
+content_id = "gm.presentation.render_style_profile.neutral"
+content_type_id = "gm.presentation.render_style_profile"
+tags = PackedStringArray("neutral", "presentation", "planar3d", "ext08")
+content_version = "1.0.0"
+source = "gm_ext_3d_08_neutral"
+material_mapping_id = "gm.material.mapping.neutral"
+lighting_model = "toon"
+light_intensity = 1.0
+ambient_strength = 0.35
+rim_light_strength = 0.0
+outline_enabled = true
+outline_color = Color(0.08, 0.07, 0.06, 1)
+outline_width = 0.025
+palette_id = "gm.palette.neutral"
+palette_hexes = PackedStringArray("#f4e7d0", "#7d9bb5", "#3f4652", "#b86b51")
+palette_quantization_steps = 4
+dither_enabled = true
+dither_pattern = "bayer4"
+dither_strength = 0.2
+post_process_enabled = false
+post_process_id = "none"
+post_process_strength = 0.0
+shadow_enabled = true
+shadow_mode = "blob"
+shadow_softness = 0.55
+shadow_strength = 0.7
+world_render_resolution = Vector2i(320, 180)
+ui_render_resolution = Vector2i(1100, 700)
+upscale_filter = "nearest"
+pose_sampling_profile_id = "gm.presentation.pose_sampling.neutral"
+pose_sampling_mode = "Smooth"
+pose_sampling_rate = 0

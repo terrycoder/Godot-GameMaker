@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.posture_profile"
+display_name_zh = "3D 角色姿态 Profile"
+generated_class_name = "GMPostureProfile"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_posture_profile.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_posture_profile.gd"
+editable_fields = PackedStringArray("idle_spine_pitch_degrees", "walk_stride_scale", "interaction_reach_scale", "root_offset", "semantic_pose_offsets")
+editable_field_labels_zh = PackedStringArray("Idle 脊柱角度", "行走步幅", "交互触及", "Root 偏移", "语义姿态偏移")
+editable_field_help_zh = PackedStringArray("用于 Idle/Spine 语义姿态，不复制 Body。", "通过 Profile 调整 Walk 语义。", "通过 Profile 调整 Interaction 语义。", "只保存声明式 Vector3。", "按语义动作 ID 配置姿态偏移。")
+registration_version = "1.0.0"
+description_zh = "声明式姿态调整，不持有运行时 Node 或动画副本。"

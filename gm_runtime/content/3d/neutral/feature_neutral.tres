@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="GMFeatureAsset" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/characters/visual_3d/gm_feature_asset.gd" id="1"]
+
+[sub_resource type="SphereMesh" id="FeatureMesh"]
+radius = 0.08
+height = 0.16
+radial_segments = 10
+rings = 5
+
+[resource]
+script = ExtResource("1")
+display_name_zh = "中性 Feature"
+content_id = "gm.character.feature.neutral"
+content_type_id = "gm.character.feature_asset"
+tags = PackedStringArray("neutral", "feature", "socket")
+part_slot = "feature"
+mesh_asset_id = "gm.asset.mesh.neutral_feature"
+mesh = SubResource("FeatureMesh")
+attachment_socket_id = "gm.character.socket.head"
+skeleton_contract_id = "gm.character.skeleton.humanoid"
+attach_mode = "socket"
+required_core_bones = PackedStringArray()
+optional = true

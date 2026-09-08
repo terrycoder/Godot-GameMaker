@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.presentation.animation_sampling_profile"
+display_name_zh = "Animation Sampling Profile"
+generated_class_name = "GMAnimationSamplingProfile"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/presentation/planar3d/gm_animation_sampling_profile.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/presentation/planar3d/gm_animation_sampling_profile.gd"
+editable_fields = PackedStringArray("sampling_mode", "samples_per_cycle", "interpolation")
+editable_field_labels_zh = PackedStringArray("Sampling Mode", "Samples per Cycle", "Interpolation")
+editable_field_help_zh = PackedStringArray("使用8、10、12、15或Smooth。", "只影响Skeleton呈现取样。", "不改变逻辑时间、Root Motion或Cue。")
+registration_version = "1.0.0"
+description_zh = "为Skeleton提供8/10/12/15/Smooth五种可验证的呈现采样档位。"

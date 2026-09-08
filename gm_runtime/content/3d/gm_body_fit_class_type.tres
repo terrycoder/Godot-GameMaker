@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.body_fit_class"
+display_name_zh = "角色体型适配类别"
+generated_class_name = "GMBodyFitClass"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_body_fit_class.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_body_fit_class.gd"
+editable_fields = PackedStringArray("fit_id", "height_scale", "width_scale", "outfit_clearance", "compatible_outfit_ids")
+editable_field_labels_zh = PackedStringArray("Fit 类别", "高度缩放", "宽度缩放", "服装间隙", "兼容 Outfit")
+editable_field_help_zh = PackedStringArray("多个 Body 共享少量稳定 FitClass。", "只调整姿态/比例，不复制模型。", "只调整宽度比例，不复制模型。", "服装与 Body 的最小间隙。", "填写允许使用该 FitClass 的 Outfit 稳定 ID。")
+registration_version = "1.0.0"
+description_zh = "平台级 Body FitClass；用于跨角色共享服装适配规则。"

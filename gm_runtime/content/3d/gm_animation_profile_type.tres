@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.animation_profile"
+display_name_zh = "角色 Animation Profile"
+generated_class_name = "GMAnimationProfile"
+base_class_name = "GMContent"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_animation_profile.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_animation_profile.gd"
+editable_fields = PackedStringArray("animation_library_id", "semantic_action_map", "fallback_by_category")
+editable_field_labels_zh = PackedStringArray("共享动画库", "语义动作映射", "类别降级映射")
+editable_field_help_zh = PackedStringArray("只能引用共享 GMAnimationLibrary。", "使用稳定语义动作 ID，不暴露项目 Animation 名称。", "缺少细粒度动作时的确定性降级。")
+registration_version = "1.0.0"
+description_zh = "把六类语义动作映射到共享 Animation 资产。"

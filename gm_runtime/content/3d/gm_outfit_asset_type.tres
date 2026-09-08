@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="GMContentTypeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/content/gm_content_type_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+content_type_id = "gm.character.outfit_asset"
+display_name_zh = "角色 Outfit 部件"
+generated_class_name = "GMOutfitAsset"
+base_class_name = "GMCharacterPart"
+base_script_path = "res://gm_runtime/characters/visual_3d/gm_outfit_asset.gd"
+default_directory = "res://gm_runtime/content/3d"
+generated_script_path = "res://gm_runtime/characters/visual_3d/gm_outfit_asset.gd"
+editable_fields = PackedStringArray("mesh_asset_id", "mesh", "compatible_body_fit_class_ids", "hide_body_surface_ids", "attachment_socket_id")
+editable_field_labels_zh = PackedStringArray("Mesh 资产", "渲染 Mesh", "兼容 Body FitClass", "隐藏 Body 表面", "连接 Socket")
+editable_field_help_zh = PackedStringArray("稳定 Mesh 资产 ID。", "Outfit 可渲染资源。", "只声明兼容 FitClass，不复制 Body。", "用于 Body Hide 的表面稳定 ID。", "可选 Socket 连接。")
+registration_version = "1.0.0"
+description_zh = "带 FitClass 兼容性和 Body Hide 声明的通用服装资源。"
