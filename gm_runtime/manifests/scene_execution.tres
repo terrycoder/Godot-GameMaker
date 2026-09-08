@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "scene.execution"
+version = "1.0.0"
+display_name_zh = "场景任务执行"
+description_zh = "把P15旅行交接与P16任务执行请求装配为维度无关的P23 SceneSession"
+runtime_root = "res://gm_runtime/scene"
+required_modules = PackedStringArray("core", "spatial.core", "spatial.planar_2d")
+tags = PackedStringArray("scene", "execution", "p23")
+export_required_paths = PackedStringArray("res://gm_runtime/scene", "res://gm_runtime/manifests/scene_execution.tres", "res://gm_runtime/manifests/p23_enabled_manifest_index.tres", "res://gm_runtime/manifests/p23_enabled_profile.tres", "res://gm_runtime/gm_p23_export_entry.gd", "res://gm_runtime/gm_p23_export_entry.tscn")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS")
+validation_rules = PackedStringArray("typed_task_execution_request", "complete_p15_travel_envelope", "strict_scene_snapshot", "dimension_agnostic_recipe")
+license_notes = "GameMaker内部平台模块"

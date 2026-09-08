@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "character.visual_3d"
+version = "1.0.0"
+display_name_zh = "3D角色视觉合同"
+description_zh = "统一角色3D装配、Outfit Family/Variant、Body Hide、Feature模块、共享动画与导入校验"
+runtime_root = "res://gm_runtime/characters/visual_3d"
+editor_root = "res://addons/gm_editor"
+required_modules = PackedStringArray("core")
+content_types = PackedStringArray("gm.character.body_fit_class", "gm.character.body_profile", "gm.character.posture_profile", "gm.character.humanoid_skeleton_contract", "gm.character.animation_library", "gm.character.animation_profile", "gm.character.part", "gm.character.head_asset", "gm.character.hair_asset", "gm.character.outfit_asset", "gm.character.outfit_family", "gm.character.outfit_variant", "gm.character.feature_asset", "gm.character.accessory_asset", "gm.character.visual_recipe", "gm.character.import_preset", "gm.asset.mesh", "gm.asset.skinned_mesh", "gm.asset.skeleton", "gm.asset.animation", "gm.asset.material", "gm.asset.material_variant", "gm.asset.packed_scene_3d")
+tags = PackedStringArray("character", "visual_3d", "humanoid", "import")
+editor_entries = PackedStringArray("GM角色3D视觉", "GM角色3D装配")
+export_required_paths = PackedStringArray("res://gm_runtime/characters/visual_3d", "res://gm_runtime/content/3d", "res://gm_runtime/manifests/character_visual_3d.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS", "res://samples")
+validation_rules = PackedStringArray("recipe_only_references", "shared_animation_library", "humanoid_skeleton_contract", "outfit_fit_compatibility", "outfit_family_variant", "body_hide_non_destructive", "feature_not_core_skeleton", "feature_local_skeleton", "visual_compile_cache", "import_preset_stability", "no_domain_fact_writes")
+license_notes = "GameMaker内部平台模块；不包含项目美术内容"

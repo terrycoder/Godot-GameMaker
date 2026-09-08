@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "sample.neutral_vertical"
+version = "1.0.0"
+display_name_zh = "Planar 3D中性纵向样板"
+description_zh = "复用既有Task、Planner、移动、Facility/Process、Transaction、Fact/Change/Cue与模块化角色装配的中性纵向样板"
+runtime_root = "res://gm_runtime/vertical_sample"
+editor_root = "res://addons/gm_editor/map3d"
+required_modules = PackedStringArray("core", "spatial.core", "spatial.planar_2d", "spatial.planar_3d", "character.visual_3d", "scene.execution")
+content_types = PackedStringArray("gm.neutral_vertical_sample.profile")
+tags = PackedStringArray("sample", "neutral", "vertical_slice", "planar_3d", "2d_parity")
+editor_entries = PackedStringArray("Planar 3D中性纵向样板")
+export_required_paths = PackedStringArray("res://gm_runtime/vertical_sample", "res://gm_runtime/player_shell", "res://gm_runtime/tasks", "res://gm_runtime/process", "res://gm_runtime/combat", "res://gm_runtime/content/3d", "res://gm_runtime/characters/visual_3d")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS", "res://docs", "res://samples", "res://gm_runtime/full_3d")
+validation_rules = PackedStringArray("reuse_only", "single_task_authority", "single_save_root", "multi_surface_reachable", "facility_process_complete", "combat_fact_change_cue", "ten_modular_npcs", "two_d_three_d_rule_parity", "strict_two_d_export_crop", "formal_undo_redo")
+license_notes = "GameMaker内部中性样板；不包含项目美术、玩法IP或第二权威实现"

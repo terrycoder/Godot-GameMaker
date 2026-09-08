@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "level.objects"
+version = "1.0.0"
+display_name_zh = "通用关卡对象与生成配方"
+description_zh = "使用P23 SceneRecipe语义槽装配门、箱子、机制、传送、检查点、复活、撤离与生成器"
+runtime_root = "res://gm_runtime/level"
+required_modules = PackedStringArray("core", "spatial.core", "spatial.planar_2d", "scene.execution")
+tags = PackedStringArray("level", "objects", "recipes", "p24")
+export_required_paths = PackedStringArray("res://gm_runtime/level", "res://gm_runtime/manifests/level_objects.tres", "res://gm_runtime/manifests/p24_enabled_manifest_index.tres", "res://gm_runtime/manifests/p24_enabled_profile.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS")
+validation_rules = PackedStringArray("scene_recipe_object_slots", "single_definition_ability_resolver", "stable_checkpoint_position_surface", "generator_id_before_backend_projection", "no_direct_domain_write")
+license_notes = "GameMaker内部平台模块"

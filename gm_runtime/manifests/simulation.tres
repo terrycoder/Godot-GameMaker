@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "gm.module.simulation"
+version = "1.0.0"
+display_name_zh = "后台模拟运行时"
+description_zh = "可选的纯数据快照、命令合并与事实提交模块"
+runtime_root = "res://gm_runtime/simulation"
+editor_root = ""
+required_modules = PackedStringArray("core")
+content_types = PackedStringArray("gm.simulation.entity", "gm.simulation.store")
+abilities = PackedStringArray("gm.ability.simulation.command")
+events = PackedStringArray("gm.event.simulation.tick")
+cues = PackedStringArray("gm.cue.simulation.transfer.committed")
+tags = PackedStringArray("gm.simulation", "gm.simulation.active", "gm.simulation.reduced", "gm.simulation.dormant")
+runtime_services = PackedStringArray("gm.simulation.world")
+runtime_service_implementations = PackedStringArray("gm.simulation.world=res://gm_runtime/simulation/gm_simulation_world.gd")
+export_required_paths = PackedStringArray("res://gm_runtime/simulation")
+export_excluded_paths = PackedStringArray()
+validation_rules = PackedStringArray("snapshot_command_merge", "committed_fact_only_event_store", "resolution_contract", "pure_data_worker")
+migrations = PackedStringArray("gm.simulation_world.v1")
+license_notes = "GameMaker内部平台模块"

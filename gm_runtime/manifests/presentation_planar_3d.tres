@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "presentation.planar_3d"
+version = "1.0.0"
+display_name_zh = "平面战斗与Cue3D表现后端"
+description_zh = "复用P22 CombatResolver与P18 PresentationPlan，为Planar 3D提供HitVolume、TargetPoint、Projectile、AoE与Cue3D表现"
+runtime_root = "res://gm_runtime/combat/3d"
+editor_root = "res://addons/gm_editor/combat3d"
+required_modules = PackedStringArray("core", "spatial.core", "spatial.planar_3d", "character.visual_3d")
+content_types = PackedStringArray("gm.combat.hit_volume_3d", "gm.combat.target_point_3d", "gm.combat.projectile_presentation_3d", "gm.combat.aoe_presentation_3d", "gm.feedback.cue_presentation_3d", "gm.feedback.world_vfx", "gm.feedback.bone_vfx", "gm.feedback.facility_vfx", "gm.feedback.ground_vfx", "gm.feedback.floating_text", "gm.feedback.audio_3d", "gm.feedback.camera_cue")
+abilities = PackedStringArray("gm.ability.planar_combat_3d")
+effects = PackedStringArray("gm.effect.combat_result_shared")
+events = PackedStringArray("gm.event.combat.hit_3d", "gm.event.combat.miss_3d", "gm.event.presentation.cue_3d")
+cues = PackedStringArray("gm.cue.combat.3d.world_vfx", "gm.cue.combat.3d.bone_vfx", "gm.cue.combat.3d.facility_vfx", "gm.cue.combat.3d.ground_vfx", "gm.cue.combat.3d.floating_text", "gm.cue.combat.3d.audio_3d", "gm.cue.combat.3d.camera")
+tags = PackedStringArray("combat", "planar", "3d", "presentation", "cue", "ext07")
+editor_entries = PackedStringArray("GM平面战斗与Cue3D")
+export_required_paths = PackedStringArray("res://gm_runtime/combat/3d", "res://gm_runtime/feedback/3d", "res://gm_runtime/combat", "res://gm_runtime/feedback", "res://gm_runtime/gas", "res://gm_runtime/transactions", "res://gm_runtime/simulation", "res://gm_runtime/spatial_core", "res://gm_runtime/map", "res://gm_runtime/map/3d", "res://gm_runtime/manifests/presentation_planar_3d.tres", "res://gm_runtime/manifests/gm_ext_3d_07_manifest_index.tres", "res://gm_runtime/combat/3d/gm_ext_3d_07_export_entry.tscn")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS", "res://samples", "res://gm_runtime/full_3d")
+validation_rules = PackedStringArray("reuse_p22_combat_resolver", "reuse_p18_presentation_plan", "planar_vector2_xz", "height_tolerance_structured_rejection", "target_point_required", "area3d_candidate_only", "projectile_presentation_only", "aoe_presentation_only", "cue_router_required", "audio_camera_no_facts", "no_navigation_objects_in_save")
+license_notes = "GameMaker内部平台模块；不包含外部内容、项目美术或第二规则权威"

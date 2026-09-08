@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/spatial_core/gm_spatial_backend_declaration.gd" id="2"]
+
+[sub_resource type="Resource" id="SpatialBackendPlanar3D"]
+script = ExtResource("2")
+backend_id = "gm.spatial.backend.planar_3d"
+domain_id = "gm.spatial.planar_3d"
+capabilities = PackedStringArray("gm.spatial.capability.resolve_target", "gm.spatial.capability.logical_to_world", "gm.spatial.capability.world_to_logical", "gm.spatial.capability.planar_distance", "gm.spatial.capability.planar_direction", "gm.spatial.capability.travel_cost", "gm.spatial.capability.find_surface", "gm.spatial.capability.ground_height", "gm.spatial.capability.validate_walkable_position", "gm.spatial.capability.is_reachable", "gm.spatial.capability.request_path", "gm.spatial.capability.screen_to_world", "gm.spatial.capability.world_to_screen", "gm.spatial.capability.snap_to_surface", "gm.spatial.capability.find_nearest_surface")
+implementation_path = "res://gm_adapters/spatial3d/gm_planar_3d_spatial_adapter.gd"
+
+[resource]
+script = ExtResource("1")
+module_id = "spatial.planar_3d"
+version = "1.0.0"
+display_name_zh = "平面3D Surface Graph空间后端"
+description_zh = "以稳定Surface Graph支持地面采样、跨Surface连接与Planar 3D寻路"
+runtime_root = "res://gm_adapters/spatial3d"
+required_modules = PackedStringArray("core", "spatial.core")
+tags = PackedStringArray("spatial", "planar_3d", "surface_graph", "backend")
+spatial_backends = [SubResource("SpatialBackendPlanar3D")]
+export_required_paths = PackedStringArray("res://gm_adapters/spatial3d", "res://gm_runtime/spatial_core", "res://gm_runtime/map", "res://gm_runtime/manifests/spatial_planar_3d.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS")
+validation_rules = PackedStringArray("single_active_spatial_backend", "planar_3d_surface_graph", "explicit_surface_sampling", "structured_blocked_result", "no_navigation_objects_in_save")
+license_notes = "GameMaker内部平台模块"

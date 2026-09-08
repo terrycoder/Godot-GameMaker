@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "presentation.render_style_3d"
+version = "1.1.0"
+display_name_zh = "Planar3D Render Style / Visual Budget / Validation"
+description_zh = "中性3D渲染风格、语义材质、世界低分辨率合成、遮挡呈现、Pose Sampling、角色LOD预算与资产验证平台机制"
+runtime_root = "res://gm_runtime/presentation/planar3d"
+editor_root = "res://addons/gm_editor"
+required_modules = PackedStringArray("core", "spatial.core", "spatial.planar_3d", "character.visual_3d")
+content_types = PackedStringArray("gm.presentation.render_style_profile", "gm.presentation.semantic_material", "gm.presentation.animation_sampling_profile", "gm.presentation.character_visual_budget_profile")
+tags = PackedStringArray("presentation", "planar_3d", "render_style", "semantic_material", "occlusion", "pose_sampling", "lod_budget", "asset_validation", "debug_overlay")
+editor_entries = PackedStringArray("GM渲染风格与材质", "GM遮挡与Pose Sampling", "GM三维预算与验证")
+export_required_paths = PackedStringArray("res://gm_runtime/presentation/planar3d", "res://gm_runtime/content/3d", "res://gm_runtime/characters/visual_3d", "res://gm_runtime/manifests/render_style_planar_3d.tres", "res://gm_runtime/manifests/gm_ext_3d_09_manifest_index.tres", "res://gm_runtime/simulation/gm_stable_data.gd")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS", "res://docs", "res://samples", "res://gm_runtime/full_3d")
+validation_rules = PackedStringArray("parameterized_render_style_profile", "semantic_material_neutral_fallback", "world_low_resolution_nearest_upscale", "ui_native_resolution", "presentation_only_occlusion", "skeleton_pose_sampling_only", "distance_lod_hysteresis", "bounded_animation_updates", "bounded_skinned_meshes", "safe_repair_undo_redo", "asset_validation_fail_closed", "thin_visual_adapters", "no_domain_fact_writes", "p18_presentation_consumer", "strict_2d_exclusion")
+license_notes = "GameMaker内部平台模块；只包含可替换中性机制，不包含项目美术内容"

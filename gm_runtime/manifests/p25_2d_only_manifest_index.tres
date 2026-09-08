@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GMModuleManifestIndex" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest_index.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+index_version = "1.0.0"
+manifest_paths = PackedStringArray("res://gm_runtime/manifests/core.tres", "res://gm_runtime/manifests/spatial_core.tres", "res://gm_runtime/manifests/spatial_planar_2d.tres")

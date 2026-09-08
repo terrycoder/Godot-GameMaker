@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "gm.module.inventory"
+version = "1.0.0"
+display_name_zh = "物品批次与库存事务底座"
+description_zh = "Definition、Lot、Instance、Provenance、Ownership、Container与InventoryChange的统一事实底座"
+runtime_root = "res://gm_runtime/inventory"
+editor_root = ""
+required_modules = PackedStringArray("core", "gm.module.simulation")
+content_types = PackedStringArray("gm.item.definition", "gm.item.lot", "gm.item.instance", "gm.provenance.record", "gm.ownership.record", "gm.inventory.container", "gm.inventory.change")
+abilities = PackedStringArray("gm.ability.inventory.transaction")
+events = PackedStringArray("gm.fact.inventory.produced", "gm.fact.inventory.picked_up", "gm.fact.inventory.traded", "gm.fact.inventory.stored", "gm.fact.inventory.dropped", "gm.fact.inventory.transferred", "gm.fact.inventory.split", "gm.fact.inventory.merged", "gm.fact.inventory.instance_upgraded", "gm.fact.inventory.simplified_upgrade")
+tags = PackedStringArray("gm.inventory", "gm.inventory.detailed_provenance", "gm.inventory.unique_instance")
+runtime_services = PackedStringArray("gm.resolver.inventory")
+runtime_service_implementations = PackedStringArray("gm.resolver.inventory=res://gm_runtime/inventory/gm_inventory_resolver.gd")
+export_required_paths = PackedStringArray("res://gm_runtime/inventory", "res://gm_runtime/events", "res://gm_runtime/transactions", "res://gm_runtime/gas")
+export_excluded_paths = PackedStringArray("res://DOCS")
+validation_rules = PackedStringArray("definition_lot_instance_identity", "provenance_ownership_separation", "inventory_transaction_closed_loop", "fact_inventory_change_pair", "quantity_conservation", "unique_instance_no_downgrade")
+migrations = PackedStringArray("gm.inventory_store.v1", "gm.inventory_store.v2")
+license_notes = "GameMaker内部平台模块"

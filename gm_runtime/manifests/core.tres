@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=4 format=3]
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/gm_service_spec.gd" id="2"]
+[ext_resource type="Script" path="res://gm_runtime/gm_runtime_context.gd" id="3"]
+[ext_resource type="Resource" path="res://gm_runtime/manifests/core_service_spec.tres" id="4"]
+[sub_resource type="Resource" id="Service"]
+script = ExtResource("2")
+service_id = "gm.runtime_context"
+implementation = ExtResource("3")
+[resource]
+script = ExtResource("1")
+service_specs = [ExtResource("4")]
+module_id = "core"
+version = "1.0.0"
+display_name_zh = "核心运行时"
+description_zh = "最小运行时上下文"
+runtime_root = "res://gm_runtime"
+editor_root = "res://addons/gm_editor"
+events = PackedStringArray("module.started")
+tags = PackedStringArray("core")
+runtime_services = PackedStringArray("gm.runtime_context")
+runtime_service_implementations = PackedStringArray("gm.runtime_context=res://gm_runtime/gm_runtime_context.gd")
+editor_entries = PackedStringArray("GM平台状态")
+export_required_paths = PackedStringArray("res://gm_runtime/gm_runtime_context.gd", "res://gm_runtime/gm_module_registry.gd", "res://gm_runtime/gm_module_manifest.gd", "res://gm_runtime/gm_module_manifest_index.gd", "res://gm_runtime/gm_service_spec.gd", "res://gm_runtime/gm_platform_version.gd", "res://gm_runtime/gm_platform_version.tres", "res://gm_runtime/manifests/core.tres", "res://gm_runtime/manifests/core_service_spec.tres", "res://gm_runtime/manifests/manifest_index.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS", "res://gm_runtime/map/3d", "res://gm_runtime/manifests/spatial_planar_3d.tres", "res://gm_adapters/spatial3d")
+validation_rules = PackedStringArray("唯一根上下文")
+license_notes = "内部平台"

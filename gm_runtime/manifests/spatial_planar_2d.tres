@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/spatial_core/gm_spatial_backend_declaration.gd" id="2"]
+
+[sub_resource type="Resource" id="SpatialBackendPlanar2D"]
+script = ExtResource("2")
+backend_id = "gm.spatial.backend.planar_2d"
+domain_id = "gm.spatial.planar_2d"
+capabilities = PackedStringArray("gm.spatial.capability.resolve_target", "gm.spatial.capability.logical_to_world", "gm.spatial.capability.world_to_logical", "gm.spatial.capability.planar_distance", "gm.spatial.capability.planar_direction", "gm.spatial.capability.travel_cost", "gm.spatial.capability.find_surface", "gm.spatial.capability.ground_height", "gm.spatial.capability.validate_walkable_position", "gm.spatial.capability.is_reachable", "gm.spatial.capability.request_path", "gm.spatial.capability.screen_to_world", "gm.spatial.capability.world_to_screen")
+implementation_path = "res://gm_adapters/spatial/gm_planar_2d_spatial_adapter.gd"
+
+[resource]
+script = ExtResource("1")
+module_id = "spatial.planar_2d"
+version = "1.0.0"
+display_name_zh = "平面2D空间后端"
+description_zh = "把既有SemanticMap与Vector2目标包装为PlanarPosition查询合同"
+runtime_root = "res://gm_adapters/spatial"
+required_modules = PackedStringArray("core", "spatial.core")
+tags = PackedStringArray("spatial", "planar_2d", "backend")
+spatial_backends = [SubResource("SpatialBackendPlanar2D")]
+export_required_paths = PackedStringArray("res://gm_adapters/spatial", "res://gm_runtime/spatial_core", "res://gm_runtime/map", "res://gm_runtime/manifests/spatial_planar_2d.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS")
+validation_rules = PackedStringArray("single_active_spatial_backend", "planar_2d_semantic_map_adapter", "structured_blocked_result", "no_backend_objects_in_save")
+license_notes = "GameMaker内部平台模块"

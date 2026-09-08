@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GMServiceSpec" load_steps=3 format=3]
+[ext_resource type="Script" path="res://gm_runtime/gm_service_spec.gd" id="1"]
+[ext_resource type="Script" path="res://gm_runtime/gm_runtime_context.gd" id="2"]
+[resource]
+script = ExtResource("1")
+service_id = "gm.runtime_context"
+module_id = "core"
+implementation = ExtResource("2")

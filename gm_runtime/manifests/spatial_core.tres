@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GMModuleManifest" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_module_manifest.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+module_id = "spatial.core"
+version = "1.0.0"
+display_name_zh = "空间核心合同"
+description_zh = "后端无关的空间域、稳定目标引用与查询结果合同"
+runtime_root = "res://gm_runtime/spatial_core"
+required_modules = PackedStringArray("core")
+tags = PackedStringArray("spatial", "planar_2d", "contract")
+export_required_paths = PackedStringArray("res://gm_runtime/spatial_core", "res://gm_runtime/manifests/spatial_core.tres")
+export_excluded_paths = PackedStringArray("res://addons/gm_editor", "res://DOCS")
+validation_rules = PackedStringArray("stable_spatial_domain", "versioned_target_ref", "complete_planar_position", "structured_query_result", "no_backend_objects")
+license_notes = "GameMaker内部平台模块"

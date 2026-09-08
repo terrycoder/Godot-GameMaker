@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GMProjectProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://gm_runtime/gm_project_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+template_id = "p24_level_objects_enabled"
+enabled_modules = PackedStringArray("core", "spatial.core", "spatial.planar_2d", "scene.execution", "level.objects")
+spatial_domain_id = "gm.spatial.planar_2d"
+spatial_backend_id = "gm.spatial.backend.planar_2d"
+spatial_backend_enabled = true
